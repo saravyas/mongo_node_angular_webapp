@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MOngo</title>
+</head>
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="ctrl.js"></script>
+<body ng-app = "myapp" ng-controller="sara">
+	<table>
+		<tr>
+			<th>
+				<label>Name</label>
+				<input type="text" name="name" ng-model="product.name">
+			</th>			
+			<th>
+				<label>Sku</label>				
+				<input type="text" name="sku" ng-model="product.sku">
+			</th>			
+			<th>
+				<label>price</label>				
+				<input type="number" name="price" ng-model="product.price">
+			</th>								
+		</tr>
+	</table>
+	<button ng-click="src()">submit</button>	
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>sku</th>
+				<th>price</th>	
+			</tr>	
+		</thead>
+		<tbody>
+			<tr ng-repeat="data in lists" >
+				<td>{{data.name}}</td>
+				<td>{{data.sku}}</td>
+				<td>{{data.price}}</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
