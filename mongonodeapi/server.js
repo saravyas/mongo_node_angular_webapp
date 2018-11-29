@@ -16,5 +16,5 @@ app.use(express.static(__dirname +'/public'));
 app.use('/api', require('./routes/api'));
 
 // Start server
-app.listen(3000);
-console.log('Listening on port 3000...');
+app.listen(3008);
+console.log('Listening on port 3008...');
